@@ -2,12 +2,12 @@
     "compilerOptions": {
       "target": "ES2020",
       "module": "commonjs",
-      "outDir": "./dist",
+      "outDir": "./Scripts/dist",
       "strict": true,
       "esModuleInterop": true,
       "moduleResolution": "node",
       "sourceMap": true,
       "skipLibCheck": true
     },
-    "include": ["src/**/*"]
-  }
+    "include": ["./Scripts/src/**/*"]
+}

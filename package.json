@@ -1,0 +1,13 @@
+{
+  "name": "gosandbox",
+  "version": "1.0.0",
+  "description": "An environment for testing ideas in Go",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scoreboard": "concurrently \"cd scoreboard && go run .\" \"tsc --watch --project ./scoreboard/static/tsconfig.json\" \"sass --watch scoreboard/static/Styles/src/index.scss scoreboard/static/Styles/dist/index.css\" "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
