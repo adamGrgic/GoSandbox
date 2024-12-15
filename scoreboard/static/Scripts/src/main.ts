@@ -18,6 +18,27 @@ function init() {
     
     console.log('player scores have been set.');
 
+
+    const player1PlusBtn = document.getElementById('player1_plus_score_btn');
+
+    player1PlusBtn?.addEventListener("click", () => {
+        console.log('player 1 plus btn clicked');
+        const currentScore = player1Score?.at(-1) ?? 'NA';
+
+        if (!currentScore) {
+            console.error('player 1 current score not found');
+            return
+        }
+
+        const newScore = parseFloat(currentScore) + 1;
+        player1Score.push(newScore.toString());
+
+        if (player1Output) {
+            player1Output.innerHTML = player1Score?.at(-1) ?? 'NA';
+
+        }
+    })
+
     const player1MinusScoreBtn = document.getElementById('player1_minus_score_btn');
 
     player1MinusScoreBtn?.addEventListener("click", () => {
