@@ -1,0 +1,24 @@
+NOTES
+
+Creating a cli application from the book
+Powerful Command-Line Applications in Go: Build Fast and Maintainable Tools
+
+Packages involved:
+
+"bufio" - read text
+"fmt" - print formatted output
+"os" - operating system resources
+"io" - provides io.Reader interface
+"flag" - used to create and manage commandline flags
+
+Scaners
+- convenient way of reading data delimited by spaces or new lines
+
+`go test -v`
+- run tests in verbose mode
+
+
+`go build`
+- create executable
+
+
