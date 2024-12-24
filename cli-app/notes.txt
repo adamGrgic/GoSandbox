@@ -21,4 +21,12 @@ Scaners
 `go build`
 - create executable
 
+`GOOS=windows go build`
+- set build for windows platform
+
+`file project.exe`
+- file information about the executable
+- ex output: wc.exe: PE32+ executable (console) x86-64 (stripped to external PDB), for MS windows
+
+
 
