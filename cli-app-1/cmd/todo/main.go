@@ -12,6 +12,16 @@ const todoFileName = ".todo.json"
 
 func main() {
 
+	flag.Usage = func() {
+		fmt.Fprintf(flag.CommandLine.Output(),
+			"%s tool. Developed for the Pragmatic Bookshelf\n", os.Args[0])
+
+		fmt.Fprintf(flag.CommandLine.Output(), "Copyright 2020\n")
+		fmt.Fprintf(flag.CommandLine.Output(), "Usage information:")
+		flag.PrintDefaults()
+	}
+
+	fmt.Fprintf(flag.CommandLine.Output(), "Copyright 2020 \n")
 	task := flag.String("task", "", "Task to be included in the todolist")
 	list := flag.Bool("list", false, "list all tasks")
 	complete := flag.Int("complete", 0, "Item to be completed")
