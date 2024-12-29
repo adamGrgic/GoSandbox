@@ -38,6 +38,8 @@ func main() {
 
 	switch {
 	case *list:
+
+		fmt.Print(l)
 		for _, item := range *l {
 			if !item.Done {
 				fmt.Println(item.Task)
