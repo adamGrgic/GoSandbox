@@ -30,3 +30,37 @@ Scaners
 
 
 
+Chapter 2
+---------
+
+Flags package 
+
+(TODO: add notes from beginning until page 95)
+...
+
+Interfaces
+*Defines what a type should do and not what type of data it should hold
+
+A type must implement all the methods in an interface 
+
+satisfying an interface doesn't require explicit declaration (??)
+=> useful for code decoupling
+
+type Stringer interface {
+    String() string
+}
+
+It's commonn in go to use simple interfaces that define one or two methods
+
+** prioritize interfaces as function parameters rather than types 
+
+B. Environment Variables
+
+-> os.Getenv("environment variable")
+
+** can export this in ubuntu instead of usingna  .env file although seems like the .env file is best option
+
+
+
+variadic function (?)
+
