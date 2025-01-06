@@ -11,25 +11,6 @@ import (
 	todo "github.com/adamGrgic/GoSandbox/cli-app-1"
 )
 
-func (l *List) getTask(r io.Reader, args ...string) (string, error) {
-	if len(args) > 0 {
-		return strings.Join(args, " "), nil
-	}
-
-	s := bufio.NewScanner(r)
-
-	s.Scan()
-
-	if err := s.Err(); err != nil {
-		return "", err
-	}
-
-	if len(s.Text()) == 0 {
-		return "", fmt.Errorf("Task cannot be blank")
-	}
-
-	return s.Text(), nil
-}
 
 var todoFileName = ".todo.json"
 
@@ -46,8 +27,7 @@ func main() {
 		flag.PrintDefaults()
 	}
 
-	fmt.Fprintf(flag.CommandLine.Output(), "Copyright 2020 \n")
-	task := flag.String("add", "", "Add task to the ToDo list")
+	add := flag.Bool("add", false, "Add task to the ToDo list")
 	list := flag.Bool("list", false, "list all tasks")
 	complete := flag.Int("complete", 0, "Item to be completed")
 
@@ -68,7 +48,6 @@ func main() {
 	switch {
 	case *list:
 
-		fmt.Print(l)
 		for _, item := range *l {
 			if !item.Done {
 				fmt.Println(item.Task)
@@ -85,16 +64,13 @@ func main() {
 
 		l.Add(t)
 
+        if err := l.Save(todoFileName); err != nil {
+            fmt.Fprintln(os.Stderr, err)
+            os.Exit(1)
+        }
+
 	case *complete > 0:
 		if err := l.Complete(*complete); err != nil {
-			fmt.Fprintln(os.Stderr, err)
-			os.Exit(1)
-		}
-
-	case *task != "":
-		l.Add(*task)
-
-		if err := l.Save(todoFileName); err != nil {
 			fmt.Fprintln(os.Stderr, err)
 			os.Exit(1)
 		}
@@ -105,3 +81,24 @@ func main() {
 	}
 
 }
+
+func getTask(r io.Reader, args ...string) (string, error) {
+	if len(args) > 0 {
+		return strings.Join(args, " "), nil
+	}
+
+	s := bufio.NewScanner(r)
+
+	s.Scan()
+
+	if err := s.Err(); err != nil {
+		return "", err
+	}
+
+	if len(s.Text()) == 0 {
+		return "", fmt.Errorf("Task cannot be blank")
+	}
+
+	return s.Text(), nil
+}
+
