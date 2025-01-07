@@ -29,6 +29,7 @@ func main() {
 
 	add := flag.Bool("add", false, "Add task to the ToDo list")
 	list := flag.Bool("list", false, "list all tasks")
+    todos := flag.Bool("todos", false, "list all uncompleted tasks")
 	complete := flag.Int("complete", 0, "Item to be completed")
 
 	flag.Parse()
@@ -49,9 +50,9 @@ func main() {
 	case *list:
 
 		for _, item := range *l {
-			if !item.Done {
+
 				fmt.Println(item.Task)
-			}
+
 		}
 
 	case *add:
@@ -75,6 +76,12 @@ func main() {
 			os.Exit(1)
 		}
 
+    case *todos:
+        for _, item := range *l {
+            if !item.Done {
+                fmt.Println(item.Task)
+            }
+        }
 	default:
 		fmt.Fprintln(os.Stderr, "Invalid option")
 		os.Exit(1)
