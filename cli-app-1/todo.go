@@ -6,11 +6,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
-    "io"
-    "strings"
 	"time"
-    "bufio"
-
 )
 
 type item struct {

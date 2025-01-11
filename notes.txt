@@ -1,12 +1,33 @@
 NOTES
 
-
-
-
-
-Read from file sample
+Create Simple HTTP Server
 ---------------------
+package main
 
+import (
+	"fmt"
+	"log"
+	"net/http"
+)
+
+func Ping(w http.ResponseWriter, r *http.Request) {
+	w.WriteHeader(http.StatusOK)
+	fmt.Fprintln(w, "OK")
+}
+
+func main() {
+	fmt.Println("running dummy server ...")
+
+	http.HandleFunc("/", Ping)
+
+	port := ":8081"
+	fmt.Println("Dummy server is running on port", port)
+	log.Fatal(http.ListenAndServe(port, nil))
+}
+
+
+Read From File Sample
+---------------------
 package main
 
 import (
