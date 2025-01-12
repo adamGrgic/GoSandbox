@@ -1,5 +1,91 @@
 NOTES
 
+Todo: add some introductory text about go here
+
+(for now -- organize this as you go through more content)
+MISC NOTES
+
+var data type is used for declaring global or local variable types that we
+don't know the value of yet
+    - instantiated with "0" of the data type
+    >    so an int var will be initialized as 0
+const types cannot change / they are immutable
+
+const and var are the only global variables
+
+no implicit data conversions
+
+modules-
+private functions are lowercase
+ex: run() { do a thing}
+
+public functions are uppercase
+ex: Run() {do a thing}
+- this will now be available when you import this package to another directory
+
+
+strconv.Atoi()
+(?) convert string to int?
+
+fallthrough
+- keyword in switch blocks that basically says to go next
+
+for loops
+- only real looping keyword in Go
+- continue && break for execution management
+
+    - does not support while loops natively but can be achieved via the
+      following:
+
+      i= 0
+      for {
+        if i == 10 {
+            break
+        }
+        fmt.Print(i*i, "")
+        i++
+
+      }
+      fmt.Println()
+
+
+standard input
+
+fmt.Scanln()
+- read user input
+
+
+go routines
+
+
+COMMANDS
+
+go doc
+-- commandline tool for viewing go documentation
+-- !!! this doesn't seem to work as expected, should revisit
+-- works with go doc <thing> but not go doc or godoc on its own
+
+usage: `go doc <thing>`
+description: bring up information about <thing> from docs
+
+ex: go doc fmt.Printf
+
+usage: go doc -http=localhost:6060
+description: creates a web server to look at golang docs
+
+go build
+-- build executable of your project
+
+notes:
+- name of executable will be whatever file has the main package (Ex: hw.go)
+- use -o flag to
+- you can then execute the program like so: ./hw.go
+
+gofmt
+- formats your code
+
+CODE SNIPPETS
+
 Create Simple HTTP Server
 ---------------------
 package main
