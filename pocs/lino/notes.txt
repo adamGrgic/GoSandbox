@@ -1,0 +1,20 @@
+poc: Linotion
+
+Intro 1/21/2025
+create a cli app that will be ran on terminal start up
+
+it will have notion like capabilities with the ability to create or implement
+custom workflows types of activities reminders, todos, sidenotes
+
+should be capable of doing other helpful tasks, one that comes to mind is
+creating sample json data
+
+at this point I'm not sure how much is going to be configurable versus oob
+(things you can simply setup in the terminal) will have to play around with
+it and use it to my liking
+
+Ultimately I envision this as a server application that runs continuously and
+then options to connect to server and do a bunch of pre made commands. Geared
+more towards personal use / things that would be helpful to implement in your
+daily life.
+

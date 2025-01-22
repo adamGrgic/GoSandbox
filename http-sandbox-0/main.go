@@ -33,6 +33,10 @@ func PingSystem(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("PONG"))
 }
 
+func FooSystem(w http.ResponseWriter, r *http.Request) {
+    w.Write([]byte("FOO DOG YO"))
+}
+
 func ValidateAuthorizationToken(token string) bool {
 	fmt.Println("Validating Auth Token")
 
@@ -105,8 +109,8 @@ func setupSystemRouter() http.Handler {
 	mux := http.NewServeMux()
 
 	// Add your handlers to the mux
-	mux.Handle("/", AuthenticationMiddleware(http.HandlerFunc(PingSystem)))
-
+	mux.Handle("/ping", AuthenticationMiddleware(http.HandlerFunc(PingSystem)))
+    mux.Handle("/foo", AuthenticationMiddleware(http.HandlerFunc(FooSystem)))
 	// Wrap the mux with the CORS middleware
 	return addCORSHeaders(mux)
 }
@@ -115,7 +119,7 @@ func main() {
 	fmt.Println("Creating Server ...")
 
 	// create a location or server where readings can be retrieved from
-	port := "8080"
+	port := "43128"
 	customHandler := setupSystemRouter()
 
 	server := &http.Server{
