@@ -2,13 +2,15 @@ package main
 
 // todo: figure out how to get up down keys working again
 
-
 import (
+	"encoding/json"
 	"fmt"
+	"io"
 	"log"
+	"net/http"
 	"os"
-    "time"
-    "net/http"
+	"time"
+
 	tea "github.com/charmbracelet/bubbletea"
 )
 
@@ -82,13 +84,19 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
                 return m, nil
              // The "up" and "k" keys move the cursor up
             case "up", "k":
+                log.Println("up was pressed")
+                log.Println("debug: cursor %d", m.cursor)
                 if m.cursor > 0 {
+                    log.Println("debug: cursor is greater than 0")
                     m.cursor--
                 }
 
             // The "down" and "j" keys move the cursor down
             case "down", "j":
+                log.Println("down was pressed")
+                log.Println("debug: cursor %d", m.cursor)
                 if m.cursor < len(m.menuoptions)-1 {
+                    log.Println("debug: cursor is less than length of options")
                     m.cursor++
                 }
 
@@ -121,8 +129,8 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 }
 
 type MenuItem struct{
-    Title string
-    Description string
+    Title string `json:"title"`
+    Description string `json:"description"`
 
 }
 
@@ -170,12 +178,31 @@ func main() {
 	}
 	defer logFile.Close()
 
+    startupFile, err := os.Open("theme-options.json")
+	if err != nil {
+		log.Fatal("Failed to open log file:", err)
+	}
+    defer startupFile.Close()
+
+    bytes, err := io.ReadAll(startupFile)
+	if err != nil {
+		log.Fatalf("Failed to read file: %v", err)
+	}
+    //menuoptions := []MenuItem{
+    //    {Title : "Default Startup",Description : "Default startup method for your build"},
+    //    {Title : "Theme 1", Description : "Another common theme"},
+    //}
+
+
+    var jsonmenuoptions []MenuItem
+    if err := json.Unmarshal(bytes, &jsonmenuoptions); err != nil {
+		log.Fatalf("Failed to unmarshal JSON: %v", err)
+	}
+
+
     log.SetOutput(logFile)
-    if _, err := tea.NewProgram(model{}).Run(); err != nil {
+    if _, err := tea.NewProgram(model{menuoptions: jsonmenuoptions}).Run(); err != nil {
         fmt.Printf("Uh oh, there was an error: %v\n", err)
         os.Exit(1)
     }
-
-
-
 }
