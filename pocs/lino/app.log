@@ -722,3 +722,102 @@
 2025/01/22 20:09:11 debug: cursor %d 1
 2025/01/22 20:09:11 debug: cursor is greater than 0
 2025/01/22 20:09:14 Update ran
+2025/02/25 22:37:58 making moves
+2025/02/25 22:37:58 Update ran
+2025/02/25 22:37:58 Update ran
+2025/02/25 22:37:58 Update ran
+2025/02/25 22:38:00 Update ran
+2025/02/25 22:38:00 down was pressed
+2025/02/25 22:38:00 debug: cursor %d 0
+2025/02/25 22:38:00 debug: cursor is less than length of options
+2025/02/25 22:38:00 Update ran
+2025/02/25 22:38:00 up was pressed
+2025/02/25 22:38:00 debug: cursor %d 1
+2025/02/25 22:38:00 debug: cursor is greater than 0
+2025/02/25 22:38:51 Update ran
+2025/02/25 22:38:51 enter was pressed
+2025/02/25 22:38:52 Update ran
+2025/02/25 22:38:52 down was pressed
+2025/02/25 22:38:52 debug: cursor %d 0
+2025/02/25 22:38:52 debug: cursor is less than length of options
+2025/02/25 22:38:53 Update ran
+2025/02/25 22:38:53 enter was pressed
+2025/02/25 22:38:55 Update ran
+2025/02/25 22:38:55 up was pressed
+2025/02/25 22:38:55 debug: cursor %d 1
+2025/02/25 22:38:55 debug: cursor is greater than 0
+2025/02/25 22:38:55 Update ran
+2025/02/25 22:38:55 down was pressed
+2025/02/25 22:38:55 debug: cursor %d 0
+2025/02/25 22:38:55 debug: cursor is less than length of options
+2025/02/25 22:38:55 Update ran
+2025/02/25 22:38:55 up was pressed
+2025/02/25 22:38:55 debug: cursor %d 1
+2025/02/25 22:38:55 debug: cursor is greater than 0
+2025/02/25 22:38:55 Update ran
+2025/02/25 22:38:55 down was pressed
+2025/02/25 22:38:55 debug: cursor %d 0
+2025/02/25 22:38:55 debug: cursor is less than length of options
+2025/02/25 22:38:56 Update ran
+2025/02/25 22:38:56 up was pressed
+2025/02/25 22:38:56 debug: cursor %d 1
+2025/02/25 22:38:56 debug: cursor is greater than 0
+2025/02/25 22:38:56 Update ran
+2025/02/25 22:38:56 down was pressed
+2025/02/25 22:38:56 debug: cursor %d 0
+2025/02/25 22:38:56 debug: cursor is less than length of options
+2025/02/25 22:38:56 Update ran
+2025/02/25 22:38:56 up was pressed
+2025/02/25 22:38:56 debug: cursor %d 1
+2025/02/25 22:38:56 debug: cursor is greater than 0
+2025/02/25 22:38:56 Update ran
+2025/02/25 22:38:56 down was pressed
+2025/02/25 22:38:56 debug: cursor %d 0
+2025/02/25 22:38:56 debug: cursor is less than length of options
+2025/02/25 22:38:56 Update ran
+2025/02/25 22:38:56 up was pressed
+2025/02/25 22:38:56 debug: cursor %d 1
+2025/02/25 22:38:56 debug: cursor is greater than 0
+2025/02/25 22:38:57 Update ran
+2025/02/25 22:38:57 down was pressed
+2025/02/25 22:38:57 debug: cursor %d 0
+2025/02/25 22:38:57 debug: cursor is less than length of options
+2025/02/25 22:41:17 Update ran
+2025/02/25 22:41:19 making moves
+2025/02/25 22:41:19 Update ran
+2025/02/25 22:41:19 200
+2025/02/25 22:41:19 Update ran
+2025/02/25 22:41:19 Update ran
+2025/02/25 22:41:41 Update ran
+2025/02/25 22:41:41 Update ran
+2025/02/25 22:41:45 Update ran
+2025/02/25 22:41:45 Update ran
+2025/02/25 22:41:48 Update ran
+2025/02/25 22:41:48 down was pressed
+2025/02/25 22:41:48 debug: cursor %d 0
+2025/02/25 22:41:48 debug: cursor is less than length of options
+2025/02/25 22:41:48 Update ran
+2025/02/25 22:41:48 up was pressed
+2025/02/25 22:41:48 debug: cursor %d 1
+2025/02/25 22:41:48 debug: cursor is greater than 0
+2025/02/25 22:41:49 Update ran
+2025/02/25 22:41:49 down was pressed
+2025/02/25 22:41:49 debug: cursor %d 0
+2025/02/25 22:41:49 debug: cursor is less than length of options
+2025/02/25 22:41:49 Update ran
+2025/02/25 22:42:00 making moves
+2025/02/25 22:42:00 Update ran
+2025/02/25 22:42:00 &{0x507d80 0xc00032c040 0x643020}
+2025/02/25 22:42:00 Update ran
+2025/02/25 22:42:00 Update ran
+2025/02/25 22:44:09 Update ran
+2025/02/25 22:44:11 making moves
+2025/02/25 22:44:11 Update ran
+2025/02/25 22:44:11 FOO DOG YO
+2025/02/25 22:44:11 Update ran
+2025/02/25 22:44:11 Update ran
+2025/02/25 22:44:26 Update ran
+2025/02/25 22:44:26 down was pressed
+2025/02/25 22:44:26 debug: cursor %d 0
+2025/02/25 22:44:26 debug: cursor is less than length of options
+2025/02/25 22:44:27 Update ran
