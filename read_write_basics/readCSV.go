@@ -28,7 +28,7 @@ func readCSVFile(filepath string) ([][]string, error) {
 	return lines, nil
 }
 
-func run() {
+func main() {
 	fmt.Println("running read csv")
 
 	content, err := readCSVFile("test.csv")
