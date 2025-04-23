@@ -1,0 +1,22 @@
+[
+    {
+        "name": "adam",
+        "role": "admin",
+        "security_clearance": 4
+    },
+    {
+        "name": "sarah",
+        "role": "customer",
+        "security_clearance": 0
+    },
+    {
+        "name": "john",
+        "role": "developer",
+        "security_clearance": 2
+    },
+    {
+        "name": "chris",
+        "role": "admin",
+        "security_clearance": 1
+    }
+]
