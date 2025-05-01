@@ -51,7 +51,7 @@ func main() {
 
 	page := browser.MustPage("https://www.target.com/s?searchTerm=peanut+butter")
 
-	time.Sleep(10 * time.Second)
+	time.Sleep(15 * time.Second)
 
 	page.MustWaitIdle()
 	page.MustElement(`div[data-test="product-grid"]`)

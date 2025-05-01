@@ -1,11 +1,14 @@
 package todo
 
 import (
+	"bufio"
 	"encoding/json"
 	"errors"
 	"fmt"
+	"io"
 	"io/ioutil"
 	"os"
+	"strings"
 	"time"
 )
 
@@ -121,4 +124,3 @@ func (l *List) getTask(r io.Reader, args ...string) (string, error) {
 
 	return s.Text(), nil
 }
-
