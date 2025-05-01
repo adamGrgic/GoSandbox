@@ -1,0 +1,22 @@
+[
+    {
+        "name": "wheat",
+        "strain": "alpha"
+    },
+    {
+        "name": "wheat",
+        "strain": "beta"
+    },
+    {
+        "name": "wheat",
+        "strain": "gamma"
+    },
+    {
+        "name": "soy",
+        "strain": "alpha"
+    },
+    {
+        "name": "soy",
+        "strain": "alpha"
+    }
+]
