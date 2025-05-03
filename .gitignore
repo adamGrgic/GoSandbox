@@ -1,2 +1,6 @@
 scoreboard/static/node_modules
 node_modules
+/home/adam/repos/GoSandbox/audio-translator/whisper-env
+**/whisper-env/**/*
+whisper-env/
+audio-translator/whisper-env/
