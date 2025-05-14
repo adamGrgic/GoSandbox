@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  todoapp:
+    build: .
+    ports:
+      - "${PORT}:${PORT}"         # Uses env var from .env
+    volumes:
+      - ./data:/root/data         # Mount todos.json
+      - ./templates:/root/templates
+      - ./static:/root/static
+    environment:
+      - PORT=${PORT}
+      - TODOS_FILE=${TODOS_FILE} # Also inject TODOS_FILE if needed
+    restart: unless-stopped

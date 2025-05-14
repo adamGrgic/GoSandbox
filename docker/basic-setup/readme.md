@@ -1,0 +1,1 @@
+The purpose of this sandbox project is to help myself understand the basics of using docker with go. 
